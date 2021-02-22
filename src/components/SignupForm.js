@@ -26,9 +26,9 @@ const SignupForm = props => {
             <View style={styles.sigininButtonsBlock} >
                 <Text>OR SIGN UP WITH</Text>
                 <View style={styles.iconsBlock}>
-                    <SocialIcon type="google" />
-                    <SocialIcon type="facebook" />
-                    <SocialIcon type="twitter" />
+                    <TouchableOpacity><SocialIcon type="google" /></TouchableOpacity>
+                    <TouchableOpacity><SocialIcon type="facebook" /></TouchableOpacity>
+                    <TouchableOpacity><SocialIcon type="twitter" /></TouchableOpacity>     
                 </View>
             </View>
 

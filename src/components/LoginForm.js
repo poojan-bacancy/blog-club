@@ -1,9 +1,8 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet,TouchableOpacity, Text, View } from 'react-native'
 import Input from './Input'
 import CustomButton from './CustomButton'
 import Dimensions from '../constants/Dimensions'
-import { TouchableOpacity } from 'react-native'
 import Colors from '../constants/Colors'
 import { SocialIcon } from 'react-native-elements'
 
@@ -29,9 +28,9 @@ const LoginForm = props => {
             <View style={styles.sigininButtonsBlock} >
                 <Text>OR SIGN IN WITH</Text>
                 <View style={styles.iconsBlock}>
-                    <SocialIcon type="google" />
-                    <SocialIcon type="facebook" />
-                    <SocialIcon type="twitter" />
+                    <TouchableOpacity><SocialIcon type="google" /></TouchableOpacity>
+                    <TouchableOpacity><SocialIcon type="facebook" /></TouchableOpacity>
+                    <TouchableOpacity><SocialIcon type="twitter" /></TouchableOpacity>                    
                 </View>
             </View>
 

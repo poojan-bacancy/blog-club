@@ -1,6 +1,7 @@
 import React from 'react'
 import { ScrollView,StyleSheet, Text, View , TouchableOpacity } from 'react-native'
 import Entypo from 'react-native-vector-icons/Entypo'
+import MyPostsContainer from '../components/MyPostsContainer'
 import ProfileCard from '../components/ProfileCard'
 import Colors from '../constants/Colors'
 
@@ -12,6 +13,7 @@ const ProfileScreen = () => {
                 <TouchableOpacity><Entypo name="dots-three-horizontal" size={25}  /></TouchableOpacity>
             </View>
             <ProfileCard />
+            <MyPostsContainer />
         </ScrollView>
     )
 }

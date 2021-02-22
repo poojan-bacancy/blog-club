@@ -15,12 +15,12 @@ const Input = (props) => {
     }
 
     return (
-        <View style={styles.inputContainer}>
-            <Text style={styles.label} >{props.label}</Text>
+        <View style={{...styles.inputContainer , ...props.inputBlockStyle}}>
+            { props.label && <Text style={styles.label} >{props.label}</Text>}
             <View style={inputBlockStyle}>
                 <TextInput 
                     value={props.value}
-                    style={styles.input}
+                    style={{...styles.input , ...props.inputStyle}}
                     onFocus = {() => setIsFocus(true)}
                     onBlur={() => setIsFocus(false)}
                     secureTextEntry = {props.password && !isVisible}
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         color : '#2D4379'
     },
     input : {
-        flex : 1
+        flex : 1,
     },
     showButton : {
         fontSize : 12,

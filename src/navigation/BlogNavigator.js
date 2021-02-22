@@ -8,6 +8,7 @@ import SearchScreen from '../screens/SearchScreen'
 import ProfileScreen from '../screens/ProfileScreen'
 import Colors from '../constants/Colors';
 import Feather from 'react-native-vector-icons/Feather'
+import Dimension from '../constants/Dimensions'
 
 const { width } = Dimensions.get('window')
 
@@ -85,7 +86,7 @@ function MyTabBar({ state, descriptors, navigation }) {
             testID={options.tabBarTestID}
             onPress={onPress}
             onLongPress={onLongPress}
-            style={{   width : width/5.5  , marginRight : (index === 1) ? 60 : 15 , alignItems : 'center' , justifyContent : 'center' , height : 60  }}
+            style={{   width : width/5.5  , marginRight : (index === 1) ? Dimension.width * 64 : Dimension.width * 10 , alignItems : 'center' , justifyContent : 'center' , height : 60  }}
           >
             <Feather name={tabBarIcon} size={20} color= {isFocused ? Colors.primary : '#7B8BB2' } />
             <Text style={{ color: isFocused ? Colors.primary : '#7B8BB2' }}>
