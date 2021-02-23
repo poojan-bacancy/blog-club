@@ -1,5 +1,7 @@
 import React from 'react'
-import { StyleSheet, Image, Text, View } from 'react-native'
+import { StyleSheet, Image, View } from 'react-native'
+import Colors from '../constants/Colors'
+import Text from './Text' 
 
 const ArticleCard = () => {
     return (
@@ -32,13 +34,14 @@ const styles = StyleSheet.create({
         fontSize : 18,
         lineHeight : 20,
         color : '#0D253C',
-        marginHorizontal :15,
+        marginHorizontal :20,
         marginVertical : 15
     },
     articleDetailText : {
+        color : Colors.secondary,
         fontWeight : '400',
         fontSize : 14,
         lineHeight : 20,
-        marginHorizontal : 16,
+        marginHorizontal : 20,
     }
 })

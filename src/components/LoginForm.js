@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyleSheet,TouchableOpacity, Text, View } from 'react-native'
+import { StyleSheet,TouchableOpacity, View } from 'react-native'
+import Text from './Text'
 import Input from './Input'
 import CustomButton from './CustomButton'
 import Dimensions from '../constants/Dimensions'

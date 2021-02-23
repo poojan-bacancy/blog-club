@@ -1,7 +1,8 @@
 import React from 'react'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import Entypo from 'react-native-vector-icons/Entypo'
-import { StyleSheet , ScrollView ,Image , Text , View,TouchableOpacity } from 'react-native'
+import { StyleSheet , ScrollView ,Image , View,TouchableOpacity } from 'react-native'
+import Text from '../components/Text'
 import EvilIcons from 'react-native-vector-icons/EvilIcons'
 import Feather from 'react-native-vector-icons/Feather'
 import Colors from '../constants/Colors'
@@ -12,39 +13,39 @@ import CustomButton from '../components/CustomButton'
 const ArticleScreen = () => {
 
     return (
-        <ScrollView style={styles.screen}>
-           <View style={styles.header}>
-                <TouchableOpacity><MaterialCommunityIcons size={30} name="less-than"/></TouchableOpacity>
-                <TouchableOpacity><Entypo style={{marginRight : 10}} name="dots-three-horizontal" size={30} /></TouchableOpacity>
-           </View>
-           <Text style={styles.titleText}>
-           Four Things Every Woman Needs To Know
-           </Text>
-           <View style={styles.articleAuthorContent}>
-                <View style={{flexDirection : 'row'}}>
-                    <Image style={styles.authorImage} source={require('../../assets/images/authorLogo.png')} />
-                    <View style={{ justifyContent : 'space-around'}}>
-                        <Text>Richard Gervain</Text>
-                        <Text>2m ago</Text>
-                    </View>
+        <View style={{ flex : 1}}>
+            <ScrollView style={styles.screen}>
+                <View style={styles.header}>
+                    <TouchableOpacity><MaterialCommunityIcons size={30} name="less-than"/></TouchableOpacity>
+                    <TouchableOpacity><Entypo style={{marginRight : 10}} name="dots-three-horizontal" size={30} /></TouchableOpacity>
                 </View>
-                <View style={{ flexDirection : 'row'}}>
-                    <TouchableOpacity>
-                    <Feather style={{marginHorizontal : 10}} name="send" size={25} color={Colors.primary} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                    <Feather style={{marginHorizontal : 10}} name="bookmark" size={25} color={Colors.primary} />
-                    </TouchableOpacity>
-                </View> 
-           </View>
-           <ArticleCard />
-           
-               <CustomButton style={{ flexDirection : 'row' , justifyContent : 'space-around' , position : 'absolute' , left : Dimensions.width* 230 , top : Dimensions.height * 600}} >
-                    <EvilIcons name="like" size={25} color="#ffffff" />
-                    <Text style={{color : '#ffffff' , marginHorizontal : 5}}>2.1k</Text>
-               </CustomButton>
-           
-        </ScrollView>
+                <Text style={styles.titleText}>
+                    Four Things Every Woman Needs To Know
+                </Text>
+                <View style={styles.articleAuthorContent}>
+                    <View style={{flexDirection : 'row'}}>
+                        <Image style={styles.authorImage} source={require('../../assets/images/authorLogo.png')} />
+                        <View style={{ justifyContent : 'space-around'}}>
+                            <Text style={{color:Colors.secondary}} >Richard Gervain</Text>
+                            <Text style={{color:Colors.secondary}} >2m ago</Text>
+                        </View>
+                    </View>
+                    <View style={{ flexDirection : 'row'}}>
+                        <TouchableOpacity>
+                            <Feather style={{marginHorizontal : 10}} name="send" size={25} color={Colors.primary} />
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Feather style={{marginHorizontal : 10}} name="bookmark" size={25} color={Colors.primary} />
+                        </TouchableOpacity>
+                    </View> 
+                </View>
+                <ArticleCard />   
+            </ScrollView>
+            <CustomButton style={styles.button} >
+                <EvilIcons name="like" size={30} color="#ffffff" />
+                <Text style={styles.buttonText}>2.1k</Text>
+            </CustomButton>
+        </View>
     )
 }
 
@@ -78,5 +79,16 @@ const styles = StyleSheet.create({
     },
     authorImage : {
         marginRight : 10
-    }
+    },
+    button : { 
+        flexDirection : 'row' , 
+        justifyContent : 'space-around' , 
+        position : 'absolute' , 
+        left : Dimensions.width* 220 , 
+        top : Dimensions.height * 600
+    },
+    buttonText : {
+        color : '#ffffff' , 
+        fontSize : 16 , 
+        marginHorizontal : 10}
 })

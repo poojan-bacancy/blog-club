@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { StyleSheet, Text, View ,TouchableOpacity } from 'react-native'
+import { StyleSheet, View ,TouchableOpacity } from 'react-native'
+import Text from './Text'
 import Colors from '../constants/Colors'
 import Dimensions from '../constants/Dimensions'
 
@@ -8,7 +9,6 @@ const ProfileButton = props => {
 
     const [whoIsFocused,setWhoIsFocused] = useState('posts');
     
-
     return (
         <View style={styles.button}>
             <TouchableOpacity 
@@ -46,7 +46,15 @@ const styles = StyleSheet.create({
         backgroundColor : Colors.primary,
         borderRadius : 12,
         paddingRight : 3,
-        height : Dimensions.height * 67
+        height : Dimensions.height * 67,
+        shadowColor: "#000a",
+        shadowOffset: {
+        width: 0,
+        height: 10,
+        },
+        
+        shadowOpacity: 0.9,
+        elevation : 10,
     },
     number : {
         fontSize : 20,

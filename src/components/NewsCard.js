@@ -1,7 +1,8 @@
 import React from 'react'
-import { StyleSheet, Text, View , Image } from 'react-native'
+import { StyleSheet, View , Image } from 'react-native'
 import Colors from '../constants/Colors'
 import Dimensions from '../constants/Dimensions'
+import Text from './Text'
 
 const NewsCard = ({children}) => {
     return (
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     newsDetailBlock : {
         paddingBottom : 20,
         justifyContent : 'space-around',
-        paddingLeft:  15,
+        paddingLeft:  5,
     },
     newsTitleText : {
         fontSize : 14,
@@ -45,6 +46,6 @@ const styles = StyleSheet.create({
         fontSize : 14,
         lineHeight : 20,
         fontWeight : '800',
-        
+        color : Colors.secondary
     }
 })

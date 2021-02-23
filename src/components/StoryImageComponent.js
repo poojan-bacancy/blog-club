@@ -4,7 +4,7 @@ import Colors from '../constants/Colors'
 import Dimensions from '../constants/Dimensions'
 
 const StoryImageComponent = (props) => {
-    return <TouchableOpacity style={styles.storyComponent}>
+    return <TouchableOpacity style={styles.storyComponent}onPress={props.onPress} >
         <Image style={{...styles.storyPlaceHolder , ...props.style}} source={props.uri} />
     </TouchableOpacity>
 }

@@ -79,8 +79,16 @@ const styles = StyleSheet.create({
         justifyContent : 'center',
         backgroundColor : "#0D253C",
         borderRadius : 30,
+        shadowRadius : 5,
         paddingVertical : 3,
-        height : Dimensions.height * 42
+        height : Dimensions.height * 50,
+        shadowColor: "#000a",
+        shadowOffset: {
+        width: 0,
+        height: 10,
+        },
+        shadowOpacity: 0.9,
+        elevation : 15,
     },
     number : {
         fontSize : 20,
@@ -99,7 +107,7 @@ const styles = StyleSheet.create({
         justifyContent : 'center',
         alignItems : 'center',
         borderRadius  : 30,
-        padding : 5,
+        padding : 6,
         marginHorizontal : 5
     }
 })

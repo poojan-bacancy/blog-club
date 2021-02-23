@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { TextInput } from 'react-native'
-import { StyleSheet, Text, View ,TouchableOpacity } from 'react-native'
+import { StyleSheet, View ,TouchableOpacity } from 'react-native'
+import Text from './Text'
 import Colors from '../constants/Colors'
 import Dimensions from '../constants/Dimensions'
 

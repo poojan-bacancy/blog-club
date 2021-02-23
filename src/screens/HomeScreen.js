@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Colors  from '../constants/Colors'
-import { StyleSheet,TouchableOpacity, Text, View , ScrollView, FlatList } from 'react-native'
+import { StyleSheet,TouchableOpacity, View , ScrollView, FlatList } from 'react-native'
+import Text from '../components/Text'
 import Feather from 'react-native-vector-icons/Feather'
 import { storyData } from '../constants/storyData'
 import StoryImageComponent from '../components/StoryImageComponent'
 import NewsCard from '../components/NewsCard'
+import StoryModal from '../components/StoryModal'
+import ImageCarousel from '../components/ImageCarousel'
 
 const HomeScreen = () => {
+    const [insModelOpen,setIsmodelOpen] = useState(false);
     return (
         <ScrollView style={styles.screen}>
             <View style={styles.headerBlock}>
@@ -20,11 +24,16 @@ const HomeScreen = () => {
                     style={{marginLeft : 20}}
                     horizontal
                     data ={storyData}
-                    renderItem={({item}) => <StoryImageComponent uri={item.uri} />}
+                    renderItem={({item}) => <StoryImageComponent uri={item.uri} onPress = {() => setIsmodelOpen(true)} />}
                 />
             </View>
 
-            {/* <ImageSlider /> */}
+            <StoryModal 
+                visible = {insModelOpen}
+                onClose = {() => setIsmodelOpen(false)}
+            />
+
+            <ImageCarousel />
 
             <View style={styles.newsBlock} >
                 <View style={styles.newsTitle}>
@@ -55,7 +64,7 @@ const styles = StyleSheet.create({
         flexDirection : 'row'
     },
     hiText : {
-        color : '#2D4379',
+        color : Colors.secondary,
         fontSize : 18,
         lineHeight : 25
     },

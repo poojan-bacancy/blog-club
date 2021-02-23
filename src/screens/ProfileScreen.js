@@ -1,5 +1,6 @@
 import React from 'react'
-import { ScrollView,StyleSheet, Text, View , TouchableOpacity } from 'react-native'
+import { ScrollView,StyleSheet, View , TouchableOpacity } from 'react-native'
+import Text from '../components/Text'
 import Entypo from 'react-native-vector-icons/Entypo'
 import MyPostsContainer from '../components/MyPostsContainer'
 import ProfileCard from '../components/ProfileCard'

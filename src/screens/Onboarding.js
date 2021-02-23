@@ -1,11 +1,12 @@
 import React from 'react'
-import { StyleSheet, Text, View , Image } from 'react-native'
+import { StyleSheet, View , Image } from 'react-native'
 import Dimensions from '../constants/Dimensions'
 import CustomButton from '../components/CustomButton'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Colors from '../constants/Colors'
+import Text from '../components/Text'
 
-const Onboarding = () => {
+const Onboarding = ({navigation}) => {
     return (
         <View style={styles.screen} >
             
@@ -24,9 +25,9 @@ const Onboarding = () => {
                         You can read thousands of articles on Blog Club, save them in the application and share them with your loved ones.
                     </Text>
                     
-                    <View style={styles.indicatorAndButtonBlock} >
-                        <Text>HIi</Text>
-                        <CustomButton style={styles.button}>
+                    <View style={styles.buttonBlock} >
+                        
+                        <CustomButton onPress={() => navigation.navigate('Login')} style={styles.button}>
                             <AntDesign name="arrowright" size={30} color="#ffffff"/>
                         </CustomButton>
                     </View>
@@ -76,10 +77,10 @@ const styles = StyleSheet.create({
         color : '#2D4379',
         marginVertical : 20
     },
-    indicatorAndButtonBlock : {
+    buttonBlock : {
         paddingHorizontal : 5,
         flexDirection : 'row',
-        justifyContent : 'space-between',
+        justifyContent : 'flex-end',
         alignItems : 'center'
     },
     button : {

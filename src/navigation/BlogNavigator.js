@@ -85,7 +85,7 @@ function MyTabBar({ state, descriptors, navigation }) {
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarTestID}
             onPress={onPress}
-            onLongPress={onLongPress}
+            onLongPress={onLongPress}     
             style={{   width : width/5.5  , marginRight : (index === 1) ? Dimension.width * 64 : Dimension.width * 10 , alignItems : 'center' , justifyContent : 'center' , height : 60  }}
           >
             <Feather name={tabBarIcon} size={20} color= {isFocused ? Colors.primary : '#7B8BB2' } />

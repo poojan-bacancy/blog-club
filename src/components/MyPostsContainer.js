@@ -1,19 +1,20 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import Feather from 'react-native-vector-icons/Feather'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import EvilIcons from 'react-native-vector-icons/EvilIcons'
 import Colors from '../constants/Colors'
 import NewsCard from './NewsCard'
+import Text from './Text'
 
 const MyPost = () => {
     return(
         <NewsCard>
                 <View style={styles.likesTimeSavedBlock}>
                     <EvilIcons name="like" size={20} />
-                    <Text style={{marginLeft : 5 , marginRight : 15}} >2.1k</Text>
+                    <Text style={{marginLeft : 5 , marginRight : 15, color : Colors.secondary,}} >2.1k</Text>
                     <EvilIcons name="clock" size={20}  />
-                    <Text style={{marginLeft : 5 , marginRight : 15}} >1 hr ago</Text>
+                    <Text style={{marginLeft : 5 , marginRight : 15 , color : Colors.secondary,}} >1 hr ago</Text>
                     <Ionicons size={20} name="bookmark" color={Colors.primary} />
                 </View>
             </NewsCard>

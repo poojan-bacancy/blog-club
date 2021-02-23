@@ -3,7 +3,12 @@ import { StyleSheet, ImageBackground  } from 'react-native'
 
 // add time interval for navigation
 
-const SplashScreen = () => {
+const SplashScreen = ({navigation}) => {
+
+    setTimeout(() => {
+        navigation.navigate('Onboarding')
+    }, 200);
+
     return (
         <ImageBackground 
             source={require('../../assets/images/Splashscreen.png')} 

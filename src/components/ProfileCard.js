@@ -1,9 +1,10 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import Colors from '../constants/Colors'
 import Dimensions from '../constants/Dimensions'
 import ProfileButton from './ProfileButton'
 import StoryImageComponent from './StoryImageComponent'
+import Text from './Text'
 
 const ProfileCard = props => {
     const uri = require('../../assets/images/placeholder.png')
@@ -60,6 +61,7 @@ const styles = StyleSheet.create({
         alignItems :'center'
     },
     username : {
+        color : Colors.secondary,
         fontSize : 14,
         lineHeight : 19,
         fontWeight : '400',
@@ -82,6 +84,7 @@ const styles = StyleSheet.create({
         fontWeight : '800'
     },
     aboutText : {
+        color : Colors.secondary,
         marginVertical : 5,
         fontSize : 14,
         lineHeight : 20,

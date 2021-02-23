@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { StyleSheet, Image, View, TouchableOpacity, Text } from 'react-native'
+import { StyleSheet, Image, View, TouchableOpacity } from 'react-native'
+import Text from '../components/Text'
 import Colors from '../constants/Colors'
 import Dimensions from '../constants/Dimensions'
 import { KeyboardAvoidingView } from 'react-native'

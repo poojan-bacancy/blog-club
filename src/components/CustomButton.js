@@ -5,7 +5,7 @@ import Colors from '../constants/Colors'
 const CustomButton = props => {
     return (
         <TouchableOpacity 
-            style={{...props.style , ...styles.buttonStyle}}
+            style={{ ...styles.buttonStyle , ...props.style }}
             onPress = { props.onPress }
         >
             {props.children}

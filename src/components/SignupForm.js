@@ -1,10 +1,10 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import Text from './Text'
 import Input from './Input'
 import CustomButton from './CustomButton'
 import Dimensions from '../constants/Dimensions'
 import { TouchableOpacity } from 'react-native'
-import Colors from '../constants/Colors'
 import { SocialIcon } from 'react-native-elements'
 
 const SignupForm = props => {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { TouchableOpacity } from 'react-native'
-import { StyleSheet,ScrollView, Text, View } from 'react-native'
+import { StyleSheet,ScrollView, View } from 'react-native'
+import Text from '../components/Text'
 import Feather from 'react-native-vector-icons/Feather'
 import ArticleButton from '../components/ArticleButton'
 import Colors from '../constants/Colors'
@@ -128,6 +129,7 @@ const styles = StyleSheet.create({
         borderBottomWidth : 1,
     },
     articleContentDetailText : {
+        color : Colors.secondary,
         marginVertical : 12,
         fontWeight : '400',
         fontSize : 14,
